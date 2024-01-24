@@ -9,56 +9,67 @@ const avatar = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX_VvgfUo6unuT_Jh53rUdvIOyXfAgVc5q7mvm7xhgClWp_NXKzBhGMNzX9RkTCiibUFE&usqp=CAU"
 ];
 
-const User1 = {
-  avatar:avatar[0],
-  name :'Sammy shenghai',
-  designation:'Photographer',
-  salary:46000
-}
+const customers = [
+  {
+    avatar: avatar[0],
+    name: "Sammy shenghai",
+    designation: "Photographer",
+    salary: 46000,
+  },
+  {
+    avatar: avatar[1],
+    name: "Milina Hankoff",
+    designation: "Doctor",
+    salary: 48000,
+  },
+  {
+    avatar: avatar[2],
+    name: "Teila Brands",
+    designation: "Model",
+    salary: 46000,
+  },
+  {
+    avatar: avatar[3],
+    name: "Samantha Jade",
+    designation: "Lawyer",
+    salary: 44000,
+  },
+  {
+    avatar: avatar[4],
+    name: "Neyon Krifft",
+    designation: "Engineer",
+    salary: 45000,
+  },
+  {
+    avatar: avatar[5],
+    name: "Sara Maden",
+    designation: "Developer",
+    salary: 45000,
+  },
+];
 
-const User2= {
-  avatar:avatar[1],
-  name :'Milina Hankoff',
-  designation:'Doctor',
-  salary:48000
-}
-const User3 = {
-  avatar:avatar[2],
-  name :'Teila Brands',
-  designation:'Model',
-  salary:46000
-}
-const User4 = {
-  avatar:avatar[3],
-  name :'Samantha Jade',
-  designation:'Lawyer',
-  salary:44000
-}
-const User5 = {
-  avatar:avatar[4],
-  name :'Neyon Krifft',
-  designation:'Engineer',
-  salary:45000
-}
-const User6 = {
-  avatar:avatar[5],
-  name :'Sara Maden',
-  designation:'Developer',
-  salary:45000
-}
+const customerNames = ['anna', 'ammy', 'alex'];
 
-// const customerNames
+const names = customerNames.map((name)=>{
+  return <h1>{name}</h1>;
 
+})
+console.log(names);
 function UserManager() {
   return (
-    <div className = 'wrapper'>
-      <User avatar={User1.avatar} name ={User1.name} designation={User1.designation} salary={User1.salary}/>
-      <User avatar={User2.avatar} name ={User2.name} designation={User2.designation} salary={User2.salary}/>
-      <User avatar={User3.avatar} name ={User3.name} designation={User3.designation} salary={User3.salary}/>
-      <User avatar={User4.avatar} name ={User4.name} designation={User4.designation} salary={User4.salary}/>
-      <User avatar={User5.avatar} name ={User5.name} designation={User5.designation} salary={User5.salary}/>
-      <User avatar={User6.avatar} name ={User6.name} designation={User6.designation} salary={User6.salary}/>
+    <div className="wrapper">
+      {names}
+      {/* {customers}; */}
     </div>
+
+    // <div className = 'wrapper'>
+    //   <User avatar={User1.avatar} name ={User1.name} designation={User1.designation} salary={User1.salary}/>
+    //   <User avatar={User2.avatar} name ={User2.name} designation={User2.designation} salary={User2.salary}/>
+    //   <User avatar={User3.avatar} name ={User3.name} designation={User3.designation} salary={User3.salary}/>
+    //   <User avatar={User4.avatar} name ={User4.name} designation={User4.designation} salary={User4.salary}/>
+    //   <User avatar={User5.avatar} name ={User5.name} designation={User5.designation} salary={User5.salary}/>
+    //   <User avatar={User6.avatar} name ={User6.name} designation={User6.designation} salary={User6.salary}/>
+    // </div>
   );
 }
 
