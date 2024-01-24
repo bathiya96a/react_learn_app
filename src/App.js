@@ -59,6 +59,7 @@ function UserManager() {
   return (
     <div className="wrapper">
       <SearchForm />
+      <hr />
       {users.map((userla) => {
         return <User {...userla} key={userla.code} />;
       })}
@@ -81,13 +82,14 @@ const SearchForm=()=>{
   console.log(e.target.value);
   console.log('manageChangeEvent');
 }} /> |
-        <button type="submit" onClick={(e)=>{
+        <button type="submit" className="btn" onClick={(e)=>{
   console.log('manageClickEvent');
-}}>Search</button>
+}} >Search</button>
       </form>
     </div>
   )
 }
+
 
 const User = (props)=> {
   // console.log(props.user); // undefined, because now data directly get through props.
@@ -117,12 +119,21 @@ const Avatar = ({userAvatar})=> {
 const UserData = ({name, designation, salary, children})=> {
   return (
     <section className="user-data">
-      <UserName userName = {name}/>
-      <Designation  designation = {designation}/>
-      <Salary salary={salary}/>
-      <p>
-        {children}
-      </p>
+      <UserName userName={name} />
+      <Designation designation={designation} />
+      <Salary salary={salary} />
+      <p>{children}</p>
+      <div>
+        <button
+          style={{ border: "1px solid black", display: "" }}
+          className="btn"
+          onClick={(e) => {
+            console.log({ name, designation, salary });
+          }}
+        >
+          Get Data
+        </button>
+      </div>
     </section>
   );
 }
