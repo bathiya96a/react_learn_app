@@ -49,3 +49,36 @@ body {
   justify-content: flex-start;
   padding: 10px;
 }
+
+.search-outer input, button {
+  border:none;
+  padding: 10px;
+}
+
+.search-outer input{
+  margin: 0 2px 0 20px;
+  width: 300px;
+  border: 0.5px solid azure;
+}
+
+.search-outer input:focus{
+    outline: none;
+    border: 1px solid #f5f6e0;
+}
+
+.search-outer input:active {
+  border: 1px solid wheat;
+}
+
+.search-outer button {
+  margin: 0 0 0 2px;
+}
+
+.search-outer button:hover {
+  background-color: #f5f6e0;
+}
+
+.search-outer button:active{
+  background-color: black;
+  color: white;
+}
