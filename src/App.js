@@ -9,7 +9,7 @@ const avatar = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX_VvgfUo6unuT_Jh53rUdvIOyXfAgVc5q7mvm7xhgClWp_NXKzBhGMNzX9RkTCiibUFE&usqp=CAU"
 ];
 
-const customers = [
+const users = [
   {
     avatar: avatar[0],
     name: "Sammy shenghai",
@@ -48,28 +48,21 @@ const customers = [
   },
 ];
 
-const customerNames = ['anna', 'ammy', 'alex'];
-
-const names = customerNames.map((name)=>{
-  return <h1>{name}</h1>;
-
-})
-console.log(names);
 function UserManager() {
   return (
     <div className="wrapper">
-      {names}
+      {users.map((selectedUser)=>{
+        return (
+          <User
+            avatar={selectedUser.avatar}
+            name={selectedUser.name}
+            designation={selectedUser.designation}
+            salary={selectedUser.salary}
+          />
+        );
+})}
       {/* {customers}; */}
     </div>
-
-    // <div className = 'wrapper'>
-    //   <User avatar={User1.avatar} name ={User1.name} designation={User1.designation} salary={User1.salary}/>
-    //   <User avatar={User2.avatar} name ={User2.name} designation={User2.designation} salary={User2.salary}/>
-    //   <User avatar={User3.avatar} name ={User3.name} designation={User3.designation} salary={User3.salary}/>
-    //   <User avatar={User4.avatar} name ={User4.name} designation={User4.designation} salary={User4.salary}/>
-    //   <User avatar={User5.avatar} name ={User5.name} designation={User5.designation} salary={User5.salary}/>
-    //   <User avatar={User6.avatar} name ={User6.name} designation={User6.designation} salary={User6.salary}/>
-    // </div>
   );
 }
 
@@ -97,7 +90,6 @@ const Avatar = ({userAvatar})=> {
 }
 
 const UserData = ({name, designation, salary, children})=> {
-  console.log(children);
   return (
     <section className="user-data">
       <UserName userName = {name}/>
