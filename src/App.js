@@ -60,7 +60,7 @@ function UserManager() {
       {users.map((userla)=>{
         return (
           <User
-            user = {userla}
+            {...userla}
             key = {userla.code}
           />
         );
@@ -71,8 +71,9 @@ function UserManager() {
 }
 
 const User = (props)=> {
-  console.log(props.user);
-  const {avatar, name, designation, salary} = props.user;
+  console.log(props.user); // undefined, because now data directly get through props.
+  console.log((props));
+  const {avatar, name, designation, salary} = props;
   return (
     <div className="user-outer">
       <Avatar userAvatar={avatar} />
