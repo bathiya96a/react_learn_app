@@ -69,7 +69,19 @@ function UserManager() {
 
 const SearchForm=()=>{
 
-const manageChangeEvent=()=>{
+const manageChangeEvent=(e)=>{
+  console.log(e);
+  console.log(
+    e +
+      "==================== event phase: " +
+      e.eventPhase +
+      " | target: " +
+      e.target +
+      " | target value: " +
+      e.target.value +
+      "  | timeStamp: " +
+      e.timeStamp
+  );
   console.log('manageChangeEvent');
 }
 
