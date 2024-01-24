@@ -57,7 +57,7 @@ const users = [
 function UserManager() {
   return (
     <div className="wrapper">
-      {users.map((selectedUser, index)=>{
+      {users.map((selectedUser)=>{
           const { avatar, name, designation, salary, code } = selectedUser;
         return (
           <User
@@ -65,7 +65,7 @@ function UserManager() {
             name={name}
             designation={designation}
             salary={salary}
-            key = {index}
+            key = {code}
           />
         );
 })}
