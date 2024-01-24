@@ -54,20 +54,28 @@ const users = [
   },
 ];
 
+
 function UserManager() {
   return (
     <div className="wrapper">
-      {users.map((userla)=>{
-        return (
-          <User
-            {...userla}
-            key = {userla.code}
-          />
-        );
-})}
+      <SearchForm />
+      {users.map((userla) => {
+        return <User {...userla} key={userla.code} />;
+      })}
       {/* {customers}; */}
     </div>
   );
+}
+
+const SearchForm=()=>{
+  return (
+    <div className='search-outer'>
+      <form>
+        <input type="search" /> |
+        <button>Search</button>
+      </form>
+    </div>
+  )
 }
 
 const User = (props)=> {
