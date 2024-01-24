@@ -69,27 +69,21 @@ function UserManager() {
 
 const SearchForm=()=>{
 
-const manageChangeEvent=(e)=>{
+  return (
+    <div className='search-outer'>
+      <form onSubmit={(e) => {
+  // to prevent default form submit refreshing of browser window.
+  e.preventDefault();
+  console.log('manageSubmitEvent');
+}}>
+        <input type="search" name="searchText" onChange={(e)=>{
 
   console.log(e.target.value);
   console.log('manageChangeEvent');
-}
-
-const manageClickEvent=(e)=>{
-  console.log(manageClickEvent);
-}
-
-const manageSubmitEvent = (e) => {
-  // to prevent default form submit refreshing of browser window.
-  e.preventDefault();
-  console.log(manageSubmitEvent);
-};
-
-  return (
-    <div className='search-outer'>
-      <form onSubmit={manageSubmitEvent}>
-        <input type="search" onChange={manageChangeEvent} /> |
-        <button type="submit" onClick={manageClickEvent}>Search</button>
+}} /> |
+        <button type="submit" onClick={(e)=>{
+  console.log('manageClickEvent');
+}}>Search</button>
       </form>
     </div>
   )
