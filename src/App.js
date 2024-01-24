@@ -52,12 +52,13 @@ function UserManager() {
   return (
     <div className="wrapper">
       {users.map((selectedUser)=>{
+          const { avatar, name, designation, salary } = selectedUser;
         return (
           <User
-            avatar={selectedUser.avatar}
-            name={selectedUser.name}
-            designation={selectedUser.designation}
-            salary={selectedUser.salary}
+            avatar={avatar}
+            name={name}
+            designation={designation}
+            salary={salary}
           />
         );
 })}
