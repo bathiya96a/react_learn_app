@@ -15,36 +15,42 @@ const users = [
     name: "Sammy shenghai",
     designation: "Photographer",
     salary: 46000,
+    code: 1,
   },
   {
     avatar: avatar[1],
     name: "Milina Hankoff",
     designation: "Doctor",
     salary: 48000,
+    code: 2,
   },
   {
     avatar: avatar[2],
     name: "Teila Brands",
     designation: "Model",
     salary: 46000,
+    code: 3,
   },
   {
     avatar: avatar[3],
     name: "Samantha Jade",
     designation: "Lawyer",
     salary: 44000,
+    code: 4,
   },
   {
     avatar: avatar[4],
     name: "Neyon Krifft",
     designation: "Engineer",
     salary: 45000,
+    code: 5,
   },
   {
     avatar: avatar[5],
     name: "Sara Maden",
     designation: "Developer",
     salary: 45000,
+    code: 6,
   },
 ];
 
@@ -52,7 +58,7 @@ function UserManager() {
   return (
     <div className="wrapper">
       {users.map((selectedUser, index)=>{
-          const { avatar, name, designation, salary } = selectedUser;
+          const { avatar, name, designation, salary, code } = selectedUser;
         return (
           <User
             avatar={avatar}
