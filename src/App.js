@@ -68,19 +68,28 @@ function UserManager() {
 }
 
 const SearchForm=()=>{
+
+const manageChangeEvent=()=>{
+  console.log('manageChangeEvent');
+}
+
+const manageClickEvent=()=>{
+  console.log(manageClickEvent);
+}
+
   return (
     <div className='search-outer'>
       <form>
-        <input type="search" /> |
-        <button>Search</button>
+        <input type="search" onChange={manageChangeEvent} /> |
+        <button type="button" onClick={manageClickEvent}>Search</button>
       </form>
     </div>
   )
 }
 
 const User = (props)=> {
-  console.log(props.user); // undefined, because now data directly get through props.
-  console.log((props));
+  // console.log(props.user); // undefined, because now data directly get through props.
+  // console.log((props));
   const {avatar, name, designation, salary} = props;
   return (
     <div className="user-outer">
