@@ -57,15 +57,11 @@ const users = [
 function UserManager() {
   return (
     <div className="wrapper">
-      {users.map((selectedUser)=>{
-          const { avatar, name, designation, salary, code } = selectedUser;
+      {users.map((userla)=>{
         return (
           <User
-            avatar={avatar}
-            name={name}
-            designation={designation}
-            salary={salary}
-            key = {code}
+            user = {userla}
+            key = {userla.code}
           />
         );
 })}
@@ -75,7 +71,8 @@ function UserManager() {
 }
 
 const User = (props)=> {
-  const {avatar, name, designation, salary} = props;
+  console.log(props.user);
+  const {avatar, name, designation, salary} = props.user;
   return (
     <div className="user-outer">
       <Avatar userAvatar={avatar} />
